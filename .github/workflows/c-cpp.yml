@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: install tools
       run: |
         sudo apt update
@@ -22,6 +22,7 @@ jobs:
         clang-format -i -style=file main.cpp
     - name: push
       run: |
+        git remote add origin git@github.com:surpace0924/coding_style_check_test.git
         git remote origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
         git config --global user.name "${GITHUB_ACTOR}"
         git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
