@@ -40,4 +40,5 @@ jobs:
       run: |
         git add .
         git commit -m "[CI] Automatically apply clang-format" -a
+        git pull -
         git push origin HEAD:${{ github.head_ref }}
