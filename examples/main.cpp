@@ -4,7 +4,8 @@
 #include <calculate/add/add.hpp>
 #include <calculate/sub/sub.hpp>
 
-void setup() {
+void setup() 
+{
   Serial.begin(115200);
   while (!Serial)
     ;
@@ -18,4 +19,7 @@ void setup() {
   Serial.println(sub.get(1, 1));
 }
 
-void loop() {}
+void loop()
+{
+
+}

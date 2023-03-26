@@ -4,8 +4,8 @@
 namespace calculate {
 
 class Add {
- public:
-  int get(int a, int b);
+public:
+int get(int a, int b);
 };
 
 }  // namespace calculate
