@@ -1,8 +1,7 @@
 #include <calculate/sub/sub.hpp>
 
-namespace calculate
-{
+namespace calculate {
 
-    int Sub::get(int a, int b) { return a - b; };
+int Sub::get(int a, int b) { return a - b; };
 
-}
+}  // namespace calculate
