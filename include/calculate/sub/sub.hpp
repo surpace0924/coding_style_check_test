@@ -1,15 +1,13 @@
 #ifndef CALCULATE_SUB_HPP_
 #define CALCULATE_SUB_HPP_
 
-
 namespace calculate {
 
 class Sub {
-public:
-
-int get(int a, int b);
+ public:
+  int get(int a, int b);
 };
 
-}  // calculate
+}  // namespace calculate
 
 #endif

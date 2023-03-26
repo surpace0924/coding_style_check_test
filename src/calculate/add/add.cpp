@@ -1,11 +1,7 @@
 #include <calculate/add/add.hpp>
 
-namespace calculate
-{
+namespace calculate {
 
-  int Add::get(int a, int b)
-  {
-    return a+ b;
-  };
+int Add::get(int a, int b) { return a + b; };
 
-}
+}  // namespace calculate
