@@ -21,6 +21,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v3
+      with:
+        ref: ${{ github.head_ref }}
     
     - name: install tools
       run: |
@@ -43,7 +45,5 @@ jobs:
         if (git diff --shortstat | grep '[0-9]'); then \
           git add .; \
           git commit -m "[CI] Automatically apply clang-format"; \
-          git pull origin dev; \
-          git push origin HEAD:dev; \
+          git push origin HEAD:${GITHUB_REF}; \
         fi
-        
