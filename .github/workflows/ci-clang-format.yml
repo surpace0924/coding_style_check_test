@@ -26,9 +26,9 @@ jobs:
         sudo apt update
         sudo apt install clang-format
   
-    - name: refactor
+    - name: clang format
       run: |
-        clang-format -i -style=file main.cpp
+        find include src examples -name *.c -o -name *.cc -o -name *.cpp -o -name *.h -o -name *.hh -o -name *.hpp | xargs clang-format -i -style=file
         
     - name: git setting
       run: |
@@ -38,6 +38,6 @@ jobs:
     - name: Commit and Push
       run: |
         git add .
-        git commit -m "auto commit" -a
+        git commit -m "[CI] Automatically apply clang-format" -a
         git pull
         git push origin main
