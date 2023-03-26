@@ -44,6 +44,5 @@ jobs:
         if (git diff --shortstat | grep '[0-9]'); then \
           git add .; \
           git commit -m "[CI] Automatically apply clang-format"; \
-          git push origin HEAD:${GITHUB_REF}; \
+          git push; \
         fi
-        
