@@ -38,13 +38,13 @@ jobs:
         
     - name: Commit and Push
       run: |
-        git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+        git remote origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
         git config --global user.name "${GITHUB_ACTOR}"
         git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         if (git diff --shortstat | grep '[0-9]'); then \
           git add .; \
           git commit -m "[CI] Automatically apply clang-format"; \
-          git pull; \
+          git pull origin/dev dev; \
           git push origin HEAD:${{ github.head_ref }}; \
         fi
         
