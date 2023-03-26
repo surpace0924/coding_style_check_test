@@ -1,4 +1,12 @@
+.pio
 .vscode/
+.DS_Store
+docs/html/
+*.info
+open
+ssh
+build
+send
 
 # Prerequisites
 *.d
