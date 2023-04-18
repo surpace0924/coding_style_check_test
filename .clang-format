@@ -1,1 +1,5 @@
 BasedOnStyle: Google
+ReflowComments: false
+SpacesInLineCommentPrefix:
+  Minimum: 0
+  Maximum: -1
