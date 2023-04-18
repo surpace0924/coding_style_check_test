@@ -1,8 +1,8 @@
 #include <Arduino.h>
-#include <iostream>
 
 #include <calculate/add/add.hpp>
 #include <calculate/sub/sub.hpp>
+#include <iostream>
 
 void setup() {
   Serial.begin(115200);
